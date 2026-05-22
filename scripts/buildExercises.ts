@@ -49,6 +49,7 @@ interface ParsedMolecule {
   id: string;
   smiles: string;
   idCode: string;
+  mf: string;
   name: string;
   name2: string;
   trivial: string;
@@ -87,9 +88,11 @@ for (let i = 4; i < lines.length; i++) {
   }
 
   let idCode: string;
+  let mf: string;
   try {
     const molecule = Molecule.fromSmiles(smiles);
     idCode = molecule.getIDCode();
+    mf = molecule.getMolecularFormula().formula;
   } catch (error) {
     skippedInvalid++;
     process.stderr.write(
@@ -114,6 +117,7 @@ for (let i = 4; i < lines.length; i++) {
     id,
     smiles,
     idCode,
+    mf,
     name,
     name2,
     trivial,

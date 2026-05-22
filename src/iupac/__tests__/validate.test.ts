@@ -23,6 +23,7 @@ const sampleMolecule: Molecule = {
   id: 'sample-1',
   smiles: 'C[C@H](Cl)CC',
   idCode: idCode('C[C@H](Cl)CC'),
+  mf: 'C4H9Cl',
   name: '(2R)-2-chlorobutane',
   name2: '(R)-2-chlorobutane',
   trivial: '',

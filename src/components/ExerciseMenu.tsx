@@ -1,4 +1,5 @@
 import { Button, Icon, Tag } from '@blueprintjs/core';
+import { MF } from 'react-mf';
 
 import type { Exercise } from '../types.ts';
 import {
@@ -58,7 +59,13 @@ export function ExerciseMenu({
             <div className="ex-meta">
               <Icon icon={display.icon} intent={display.intent} />
               <div className="ex-body">
-                <span className="ex-title">{exercise.title}</span>
+                <span className="ex-title">
+                  {exercise.kind === 'structure-to-name' ? (
+                    <MF mf={exercise.molecule.mf} />
+                  ) : (
+                    exercise.title
+                  )}
+                </span>
                 <div className="ex-tags">
                   <Tag minimal intent={LEVEL_INTENT[exercise.level]}>
                     {exercise.level}

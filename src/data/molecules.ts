@@ -40,6 +40,12 @@ export interface Molecule {
   smiles: string;
   /** OpenChemLib idCode (canonicalised at build time). */
   idCode: string;
+  /**
+   * Molecular formula in the `react-mf` input string format (e.g.
+   * `C8H9I`). Used in the exercise menu for `structure-to-name`
+   * entries so the IUPAC name doesn't leak the answer.
+   */
+  mf: string;
   /** Preferred IUPAC name. Matched case- and whitespace-insensitively. */
   name: string;
   /**
