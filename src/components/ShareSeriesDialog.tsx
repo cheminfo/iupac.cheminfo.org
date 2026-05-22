@@ -7,6 +7,7 @@ import {
   DialogFooter,
   InputGroup,
   NumericInput,
+  Switch,
   Tag,
 } from '@blueprintjs/core';
 import { useMemo, useState } from 'react';
@@ -70,6 +71,7 @@ export function ShareSeriesDialog({ isOpen, onClose }: Props) {
   const [tags, setTags] = useState<FunctionalKey[]>([]);
   const [count, setCount] = useState(10);
   const [seed, setSeed] = useState(42);
+  const [randomizeSeed, setRandomizeSeed] = useState(false);
 
   const spec = useMemo<SeriesSpec>(
     () => ({
@@ -78,12 +80,16 @@ export function ShareSeriesDialog({ isOpen, onClose }: Props) {
       levels: levels.length === 0 ? undefined : levels,
       tags: tags.length === 0 ? undefined : tags,
       count,
-      seed,
+      seed: randomizeSeed ? undefined : seed,
+      randomizeSeed: randomizeSeed ? true : undefined,
     }),
-    [title, kinds, levels, tags, count, seed],
+    [title, kinds, levels, tags, count, seed, randomizeSeed],
   );
 
-  const preview = useMemo(() => resolveSeries(spec).slice(0, 12), [spec]);
+  const preview = useMemo(
+    () => resolveSeries({ ...spec, seed }).slice(0, 12),
+    [spec, seed],
+  );
   const fullCount = useMemo(
     () => resolveSeries({ ...spec, count: undefined }).length,
     [spec],
@@ -219,6 +225,7 @@ export function ShareSeriesDialog({ isOpen, onClose }: Props) {
               id="series-seed"
               value={seed}
               min={0}
+              disabled={randomizeSeed}
               onValueChange={(value) => {
                 if (Number.isFinite(value)) setSeed(Math.max(0, value));
               }}
@@ -227,12 +234,40 @@ export function ShareSeriesDialog({ isOpen, onClose }: Props) {
               icon="random"
               variant="minimal"
               text="Randomize seed"
+              disabled={randomizeSeed}
               onClick={() => {
                 setSeed(Math.floor(Math.random() * 1_000_000));
               }}
             />
           </div>
+
+          <label htmlFor="series-randomize">Per-student seed</label>
+          <div className="share-cell">
+            <Switch
+              id="series-randomize"
+              checked={randomizeSeed}
+              label="Every student gets a different random order"
+              style={{ marginBottom: 0 }}
+              onChange={(event) => {
+                setRandomizeSeed(event.currentTarget.checked);
+              }}
+            />
+          </div>
         </div>
+
+        {randomizeSeed && (
+          <Callout
+            intent="warning"
+            icon="random"
+            style={{ marginTop: 12 }}
+            title="Each student will see a different selection"
+          >
+            The seed is generated locally the first time a student opens this
+            link, then saved in their browser. Revisiting the same URL on the
+            same device shows the same exercises again, so progress can be
+            resumed later.
+          </Callout>
+        )}
 
         {preview.length > 0 ? (
           <div style={{ marginTop: 12 }}>

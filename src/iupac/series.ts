@@ -2,6 +2,7 @@ import { XSadd } from 'ml-xsadd';
 
 import type { FunctionalKey } from '../data/molecules.ts';
 import type { Exercise, ExerciseKind, ExerciseLevel } from '../types.ts';
+import { STORAGE_KEYS, readJson, writeJson } from '../utils/storage.ts';
 
 import { EXERCISES, findExercise } from './exercises.ts';
 
@@ -34,6 +35,59 @@ export interface SeriesSpec {
    * Empty array disables the filter.
    */
   tags?: FunctionalKey[];
+  /**
+   * When `true`, the seed in `seed` is ignored and each student gets a
+   * fresh random seed the first time they open the link. The assigned
+   * seed is persisted in `localStorage` keyed by the URL token, so the
+   * same student keeps the same exercises across visits.
+   * @default false
+   */
+  randomizeSeed?: boolean;
+}
+
+/** Persisted record of a series the student has opened at least once. */
+export interface StoredSeriesAssignment {
+  /** Effective seed used to shuffle — either the teacher's or per-student. */
+  seed: number;
+  /** Teacher-supplied title, if any (kept for a future "saved series" UI). */
+  title?: string;
+  /** Whether the seed was assigned per-student (vs. fixed by the teacher). */
+  perStudent: boolean;
+  /** Epoch ms when the student first opened this series on this device. */
+  savedAt: number;
+}
+
+type SeriesAssignmentMap = Record<string, StoredSeriesAssignment>;
+
+/**
+ * Return the persisted seed for `token`, creating one when needed. When
+ * `spec.randomizeSeed` is true a fresh random seed is generated on first
+ * open; otherwise the teacher's deterministic seed is recorded as-is.
+ * Subsequent calls return the previously assigned value so the student
+ * sees the exact same exercise list on every revisit.
+ * @param token - The opaque `?series=` URL token.
+ * @param spec - The decoded series spec.
+ * @returns The seed to use when resolving the series.
+ */
+export function getOrAssignStudentSeed(
+  token: string,
+  spec: SeriesSpec,
+): number {
+  const map = (readJson(STORAGE_KEYS.seriesAssignments) ??
+    {}) as SeriesAssignmentMap;
+  const existing = map[token];
+  if (existing) return existing.seed;
+  const seed = spec.randomizeSeed
+    ? Math.floor(Math.random() * 1_000_000)
+    : (spec.seed ?? 0);
+  map[token] = {
+    seed,
+    title: spec.title,
+    perStudent: Boolean(spec.randomizeSeed),
+    savedAt: Date.now(),
+  };
+  writeJson(STORAGE_KEYS.seriesAssignments, map);
+  return seed;
 }
 
 /**

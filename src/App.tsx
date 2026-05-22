@@ -1,21 +1,30 @@
 import { Icon, Tab, Tabs } from '@blueprintjs/core';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { decodeSeriesParam } from './iupac/series.ts';
+import type { SeriesSpec } from './iupac/series.ts';
+import { decodeSeriesParam, getOrAssignStudentSeed } from './iupac/series.ts';
 import { About } from './pages/About.tsx';
 import { Cheatsheet } from './pages/Cheatsheet.tsx';
+import { Examples } from './pages/Examples.tsx';
 import { Exercises } from './pages/Exercises.tsx';
 import { Playground } from './pages/Playground.tsx';
 import { Tutorial } from './pages/Tutorial.tsx';
 import { readLastExerciseId } from './utils/exerciseState.ts';
 import { parseHashPath, readSeriesParam } from './utils/router.ts';
 
-type Route = 'tutorial' | 'playground' | 'exercises' | 'cheatsheet' | 'about';
+type Route =
+  | 'tutorial'
+  | 'playground'
+  | 'exercises'
+  | 'examples'
+  | 'cheatsheet'
+  | 'about';
 
 const ROUTES: Array<{ id: Route; label: string }> = [
   { id: 'tutorial', label: 'Tutorial' },
   { id: 'playground', label: 'Playground' },
   { id: 'exercises', label: 'Exercises' },
+  { id: 'examples', label: 'Examples' },
   { id: 'cheatsheet', label: 'Cheatsheet' },
   { id: 'about', label: 'About' },
 ];
@@ -32,9 +41,9 @@ function parseHash(hash: string): Route {
 
 /**
  * Root application component. Hosts a hash-based router that swaps between
- * the five pedagogic pages (tutorial, playground, exercises, cheatsheet,
- * about) and decodes the `?series=…` query string into a teacher-curated
- * exercise spec passed to the Exercises page.
+ * the six pedagogic pages (tutorial, playground, exercises, examples,
+ * cheatsheet, about) and decodes the `?series=…` query string into a
+ * teacher-curated exercise spec passed to the Exercises page.
  * @returns The application root.
  */
 export function App() {
@@ -42,9 +51,13 @@ export function App() {
     parseHash(globalThis.location.hash),
   );
 
-  const seriesSpec = useMemo(() => {
+  const seriesSpec = useMemo<SeriesSpec | null>(() => {
     const param = readSeriesParam(globalThis.location.href);
-    return decodeSeriesParam(param);
+    const decoded = decodeSeriesParam(param);
+    if (decoded && param) {
+      return { ...decoded, seed: getOrAssignStudentSeed(param, decoded) };
+    }
+    return decoded;
   }, []);
 
   useEffect(() => {
@@ -144,6 +157,7 @@ export function App() {
         {route === 'tutorial' && <Tutorial />}
         {route === 'playground' && <Playground />}
         {route === 'exercises' && <Exercises seriesSpec={seriesSpec} />}
+        {route === 'examples' && <Examples />}
         {route === 'cheatsheet' && <Cheatsheet />}
         {route === 'about' && <About />}
       </div>

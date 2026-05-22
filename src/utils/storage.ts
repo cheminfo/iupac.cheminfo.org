@@ -2,6 +2,7 @@ export const STORAGE_KEYS = {
   exerciseStates: 'iupac-cheminfo:exercise-state:v1',
   lastExercise: 'iupac-cheminfo:active-exercise:v1',
   playgroundState: 'iupac-cheminfo:playground:v1',
+  seriesAssignments: 'iupac-cheminfo:series-assignments:v1',
 } as const;
 
 /**

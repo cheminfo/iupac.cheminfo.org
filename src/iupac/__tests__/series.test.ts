@@ -1,12 +1,39 @@
-import { expect, test } from 'vitest';
+import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 
+import { STORAGE_KEYS } from '../../utils/storage.ts';
 import { EXERCISES } from '../exercises.ts';
 import {
   decodeSeriesParam,
   encodeSeriesParam,
+  getOrAssignStudentSeed,
   resolveSeries,
   seededShuffle,
 } from '../series.ts';
+
+const localStorageMock = (() => {
+  let store: Record<string, string> = {};
+  return {
+    getItem: (key: string) => (key in store ? store[key] : null),
+    setItem: (key: string, value: string) => {
+      store[key] = value;
+    },
+    removeItem: (key: string) => {
+      Reflect.deleteProperty(store, key);
+    },
+    clear: () => {
+      store = {};
+    },
+  };
+})();
+
+beforeEach(() => {
+  localStorageMock.clear();
+  vi.stubGlobal('window', { localStorage: localStorageMock });
+});
+
+afterEach(() => {
+  vi.unstubAllGlobals();
+});
 
 test('seededShuffle is deterministic for the same seed', () => {
   const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -89,8 +116,54 @@ test('encode/decode round-trip preserves the spec', () => {
   expect(decodeSeriesParam(token)).toStrictEqual(spec);
 });
 
+test('encode/decode round-trip preserves randomizeSeed', () => {
+  const spec = {
+    title: 'HW 2',
+    count: 5,
+    randomizeSeed: true,
+  };
+  const token = encodeSeriesParam(spec);
+
+  expect(decodeSeriesParam(token)).toStrictEqual(spec);
+});
+
 test('decodeSeriesParam returns null on garbage input', () => {
   expect(decodeSeriesParam(null)).toBeNull();
   expect(decodeSeriesParam('')).toBeNull();
   expect(decodeSeriesParam('not-base64!!')).toBeNull();
+});
+
+test('getOrAssignStudentSeed returns the teacher seed when randomizeSeed is false', () => {
+  const seed = getOrAssignStudentSeed('token-A', { seed: 123 });
+
+  expect(seed).toBe(123);
+});
+
+test('getOrAssignStudentSeed assigns a fresh seed once when randomizeSeed is true', () => {
+  const first = getOrAssignStudentSeed('token-B', { randomizeSeed: true });
+  const second = getOrAssignStudentSeed('token-B', { randomizeSeed: true });
+
+  expect(second).toBe(first);
+});
+
+test('getOrAssignStudentSeed assigns different seeds to different tokens', () => {
+  const seeds = new Set<number>();
+  for (let i = 0; i < 20; i++) {
+    seeds.add(getOrAssignStudentSeed(`tok-${i}`, { randomizeSeed: true }));
+  }
+
+  expect(seeds.size).toBeGreaterThan(1);
+});
+
+test('getOrAssignStudentSeed records the assignment in localStorage', () => {
+  getOrAssignStudentSeed('token-C', { title: 'HW', randomizeSeed: true });
+  const raw = localStorageMock.getItem(STORAGE_KEYS.seriesAssignments);
+
+  expect(raw).not.toBeNull();
+
+  const parsed = JSON.parse(raw ?? '{}');
+
+  expect(parsed['token-C'].perStudent).toBe(true);
+  expect(parsed['token-C'].title).toBe('HW');
+  expect(typeof parsed['token-C'].seed).toBe('number');
 });

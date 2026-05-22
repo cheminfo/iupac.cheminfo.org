@@ -161,7 +161,14 @@ export function Exercises({ seriesSpec }: Props) {
           title={seriesSpec.title ?? 'Custom series'}
         >
           You are working on a shared series of {activeExercises.length}{' '}
-          exercises. <Tag minimal>seed {seriesSpec.seed ?? 'unset'}</Tag>{' '}
+          exercises.{' '}
+          <Tag minimal>
+            {seriesSpec.randomizeSeed ? 'your seed' : 'seed'}{' '}
+            {seriesSpec.seed ?? 'unset'}
+          </Tag>{' '}
+          {seriesSpec.randomizeSeed && (
+            <>Saved in this browser so you can resume later. </>
+          )}
           <a href="./">Open the full catalogue</a> to revert.
         </Callout>
       )}
