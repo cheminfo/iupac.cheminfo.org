@@ -1,0 +1,513 @@
+:root {
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus,
+*:focus-visible {
+  outline: none !important;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: white;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+}
+
+.bp6-tab-panel[role='tabpanel'] {
+  overflow: visible;
+}
+
+.logo {
+  background: #fde047;
+  color: #0e5a91;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.muted {
+  color: #5c7080;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #5c7080;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.header-link--icon-only {
+  gap: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.exercise-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.exercise-progress-summary {
+  margin-top: 6px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.reference-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.reference-table td {
+  padding: 4px 8px;
+  vertical-align: top;
+  border-bottom: 1px dashed #ced9e0;
+}
+
+.reference-table td:first-child {
+  font-family: var(--font-mono);
+  color: #0e5a91;
+  white-space: nowrap;
+  width: 40%;
+}
+
+.reference-table tr:last-child td {
+  border-bottom: none;
+}
+
+.exercise-list {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+@media (max-width: 980px) {
+  .exercise-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exercise-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 70vh;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.exercise-menu .bp6-button {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  width: 100%;
+  padding: 8px 10px !important;
+  min-height: auto !important;
+}
+
+.exercise-menu .bp6-button.is-solved:not(.bp6-active) {
+  background: #e8f7ee !important;
+  border-color: #62b97f !important;
+}
+
+.exercise-menu .bp6-button.is-solved:not(.bp6-active) .ex-title {
+  color: #29794a;
+}
+
+.exercise-menu .bp6-button.is-attempted:not(.bp6-active) {
+  background: #fff7e6 !important;
+  border-color: #e0a700 !important;
+}
+
+.exercise-menu .ex-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.exercise-menu .ex-meta > .bp6-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.exercise-menu .ex-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exercise-menu .ex-title {
+  text-align: left;
+  font-weight: 600;
+  white-space: normal;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.exercise-menu .ex-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.exercise-menu .ex-tags .bp6-tag {
+  font-size: 11px;
+  min-height: 18px;
+  padding: 1px 6px;
+}
+
+.tutorial-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tutorial-level {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.tutorial-level-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1b2a32;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  width: 170px;
+  flex-shrink: 0;
+}
+
+.tutorial-level-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tutorial-level-buttons .bp6-button {
+  width: 32px;
+  padding: 2px 0 !important;
+  justify-content: center;
+  text-align: center;
+}
+
+.tutorial-level-buttons .bp6-button .bp6-button-text {
+  flex: none;
+  text-align: center;
+}
+
+.glossary-term {
+  border-bottom: 1px dashed #5c7080;
+  cursor: help;
+  white-space: nowrap;
+}
+
+.glossary-popover .bp6-popover-content {
+  max-width: 360px;
+  background: #1f2937;
+  color: #f3f4f6;
+}
+
+.glossary-popover .bp6-popover-arrow-fill {
+  fill: #1f2937;
+}
+
+.glossary-tooltip {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 10px 12px;
+}
+
+.glossary-tooltip__title {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.glossary-tooltip__summary {
+  margin-bottom: 6px;
+  color: #d9e2ec;
+}
+
+.glossary-tooltip__examples {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.glossary-tooltip__examples li + li {
+  margin-top: 4px;
+}
+
+.glossary-tooltip__examples code {
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.glossary-tooltip__note {
+  color: #d9e2ec;
+  margin-top: 2px;
+}
+
+.structure-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 240px;
+  background: white;
+  border: 1px solid #d3d8de;
+  border-radius: 3px;
+  padding: 12px;
+}
+
+.structure-editor {
+  width: 100%;
+  height: 460px;
+  background: white;
+  border: 1px solid #d3d8de;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.structure-empty {
+  color: #5c7080;
+  font-style: italic;
+  padding: 24px;
+  text-align: center;
+}
+
+.answer-input {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 16px;
+}
+
+.cheatsheet-toolbar,
+.share-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+}
+
+.functional-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.functional-card {
+  border: 1px solid #d3d8de;
+  border-radius: 6px;
+  padding: 12px;
+  background: #f8fafc;
+}
+
+.functional-card h4 {
+  margin: 0 0 6px;
+  color: #0e5a91;
+}
+
+.functional-card-suffix {
+  font-family: var(--font-mono);
+  background: #ffffff;
+  border: 1px solid #d3d8de;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.functional-card-example {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #394b59;
+}
+
+.functional-card-example code {
+  font-family: var(--font-mono);
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.kbd {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: #f5f8fa;
+  border: 1px solid #d3d8de;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.share-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 8px 16px;
+  align-items: start;
+}
+
+.share-grid label {
+  font-weight: 600;
+  color: #182026;
+  padding-top: 6px;
+}
+
+.share-grid .share-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.share-link-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.share-link-input {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.molecule-card {
+  border: 1px solid #d3d8de;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.molecule-card-name {
+  font-size: 13px;
+  text-align: center;
+  color: #182026;
+  font-weight: 500;
+}
+
+.molecule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html,
+  body,
+  #root {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .app-shell {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cheatsheet-page .bp6-card {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .reference-grid,
+  .functional-grid {
+    display: block !important;
+    column-count: 2;
+    column-gap: 12mm;
+  }
+
+  .functional-card,
+  .reference-grid > div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 8mm;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .reference-table {
+    font-size: 10pt;
+  }
+
+  .reference-table td {
+    padding: 2px 6px;
+  }
+
+  .reference-table td:first-child {
+    color: #000;
+  }
+
+  .cheatsheet-page .bp6-heading {
+    color: #000 !important;
+  }
+}

@@ -1,0 +1,580 @@
+label	id	SMILES	IUPAC name	IUPAC name 2	Trivial name	level	trivial	stereochemistry	cyclo	alcane	alcene	alcyne	aromatic	alcohol	ketone	carboxylic acid	halogen	nitrile	amine	ether	aldehyde	ester	amide	imine	anhydride	thiol	heterocyclic	other
+description																												
+descriptionFR																												
+remarks																												
+	334755	CC(c1ccccc1)I	(1-iodoethyl)benzene			200			x				x				x											
+	9yk8p7	C/C=C/C=C/C=C/C(C)C	(2E,4E,6E)-8-methylnona-2,4,6-triene			100		x			x																	
+	7y9h11	C/C=C/C=C/C=C/C(C)C	8-methylnona-2,4,6-triene			100					x																	
+	4td2x5	C[C@@H](Cl)[C@H](Br)CC	(2R,3R)-3-bromo-2-chloropentane			100		x		x							x											
+	8u94qq	C[CH](Cl)[CH](Br)CC	3-bromo-2-chloropentane			100				x							x											
+	392eh6	CCC/C=C(C=O)\CC	(E)-2-ethylhex-2-enal			100		x			x										x							
+	3gg3r4	CCC/C=C(C=O)\CC	2-ethylhex-2-enal			100					x										x							
+	1gqoq3	CC(/C=C/c1ccccc1)=O	(E)-4-phenylbut-3-en-2-one			100		x	x		x		x		x													
+	30ls85	CC(/C=C/c1ccccc1)=O	4-phenylbut-3-en-2-one			100			x		x		x		x													
+	7vzyr7	C/C=C/C(CC)(CCC)CC	(E)-4,4-diethylhept-2-ene			100		x			x																	
+	6ur0d9	C/C=C/C(CC)(CCC)CC	4,4-diethylhept-2-ene			100					x																	
+	57ub84	CS(C)=O	(methylsulfinyl)methane	dimethylsulfoxide		100																						x
+	4jyez4	CS(C)(=O)=O	(methylsulfonyl)methane	dimethylsulfone		100																						x
+	2qyl58	C=C(C1CC=C(C)CC1)C	1-methyl-4-(prop-1-en-2-yl)cyclohex-1-ene	1-methyl-4-(prop-1-en-2-yl)cyclohexene	limonene	200	x		x		x																	
+	99zvo2	CCC/C=C(C(Cl)(Cl)C)\F	(Z)-2,2-dichloro-3-fluorohept-3-ene			100		x			x						x											
+	4l7e3w	CCC/C=C(C(Cl)(Cl)C)\F	2,2-dichloro-3-fluorohept-3-ene			100					x						x											
+	4k4kn9	CC/C=C\O	(Z)-but-1-en-1-ol			100		x			x			x														
+	8ccyui	CC/C=C\O	but-1-en-1-ol			100					x			x														
+	7b2986	CC(O)C1=CC=CC([N+]([O-])=O)=C1	1-(3-nitrophenyl)ethan-1-ol			300			x					x														
+	8kcop7	CC(C1=CC=CC([N+]([O-])=O)=C1)=O	1-(3-nitrophenyl)ethan-1-one			300			x						x													
+	9ruyf1	O=[N+](C1=CC(Cl)=CC(Br)=C1)[O-]	1-bromo-3-chloro-5-nitrobenzene			100			x				x				x											x
+	5ogdq8	CCC/C=C/CBr	(E)-1-bromohex-2-ene			100		x			x						x											
+	7olf5x	CCC/C=C/CBr	1-bromohex-2-ene			100					x						x											
+	53h6d7	ClC1(CCC)CCCCC1	1-chloro-1-propylcyclohexane			100			x	x							x											
+	5jan91	CCCCCC(CC)/C=C/Cl	(E)-1-chloro-3-ethyloct-1-ene			100		x			x						x											
+	6rka9c	CCCCCC(CC)/C=C/Cl	1-chloro-3-ethyloct-1-ene			100					x						x											
+	3xmai8	CCC[C@@H](CCCl)F	(S)-1-chloro-3-fluorohexane	(3S)-1-chloro-3-fluorohexane		100		x		x							x											
+	4e36e7	CCCC(F)CCCl	1-chloro-3-fluorohexane			100				x							x											
+	zmu1ya	CC(CCCl)C	1-chloro-3-methylbutane			100				x							x											
+	7l88xd	CCCCCCCl	1-chlorohexane			100				x							x											
+	2j4418	CCCCOCC	1-ethoxybutane	butyl ethyl ether		100														x								
+	2ujcv5	C/C=C/OCC(C)C	(E)-1-isobutoxyprop-1-ene			200																						
+	6sq4l6	C/C=C/OCC(C)C	1-isobutoxyprop-1-ene			200					x									x								
+	96v9x3	CCCCOC	1-methoxybutane	butyl methyl ether		100														x								
+	8so4t9	CC1(CCCCC1)O	1-methylcyclohexan-1-ol	1-methylcyclohexanol		100			x					x														
+	219tif	OC1(c2ccccc2)CCCC1	1-phenylcyclopentan-1-ol	1-phenylcyclopentanol		100			x				x	x														
+	8jou4j	C[C@H](c1ccccc1)O	(R)-1-phenylethan-1-ol	(1R)-1-phenylethan-1-ol		100		x	x				x	x														
+	te516c	CC(O)c1ccccc1	1-phenylethan-1-ol			100			x				x	x														
+	1fgwl4	C[C@H](Cc1ccccc1)O	(R)-1-phenylpropan-2-ol	(2R)-1-phenylpropan-2-ol		100		x	x				x	x														
+	rnet8j	CC(CC1=CC=CC=C1)O	1-phenylpropan-2-ol			100			x				x	x														
+	5kwad2	C/C=C/OCCC	(E)-1-propoxyprop-1-ene			100																						
+	mf3y5r	C/C=C/OCCC	1-propoxyprop-1-ene			100				x										x								
+	3iy1r6	CC(Cl)Cl	1,1-dichloroethane			100											x											
+	51lky2	CC1(CC[C@@H]1C(C)(C)C)C	(R)-2-(tert-butyl)-1,1-dimethylcyclobutane			200		x	x	x																		
+	8ctoa1	CC(C1C(C)(C)CC1)(C)C	2-(tert-butyl)-1,1-dimethylcyclobutane			200			x	x																		
+	39pvbd	C[C@@H]1CC1(C)C	(R)-1,1,2-trimethylcyclopropane			100		x	x	x																		
+	3glam5	CC1C(C)(C)C1	1,1,2-trimethylcyclopropane			100			x	x																		
+	8h7ul7	BrC(Br)C(C(Br)Br)=O	1,1,3,3-tetrabromopropanone	1,1,3,3-tetrabromopropan-2-one		100									x		x											
+	97r2z3	CCC[C@@](C)(CBr)Br	(S)-1,2-dibromo-2-methylpentane			100		x		x							x											
+	370tj7	CCCC(Br)(CBr)C	1,2-dibromo-2-methylpentane			100				x							x											
+	1rr4m9	ClCCCl	1,2-dichloroethane			100				x							x											
+	5uuv37	C[C@@H]1CCCC[C@@H]1C	(1R,2S)-1,2-dimethylcyclohexane			100		x	x	x																		
+	81j611	CC1C(C)CCCC1	1,2-dimethylcyclohexane			100			x	x																		
+	95qcf6	CCC[C@@H](CCF)F	(S)-1,3-difluorohexane			100		x		x							x											
+	6ddzs8	CCCC(F)CCF	1,3-difluorohexane			100				x							x											
+	6p7ns1	COCCCOC	1,3-dimethoxypropane			100														x								
+	36lfv7	C[C@H]1CCC[C@@H](C1)C	(1S,3S)-1,3-dimethylcyclohexane			100		x	x	x																		
+	6l8b46	CC1CC(C)CCC1	1,3-dimethylcyclohexane			100			x	x																		
+	80fn76	C1CCC2(C1)OCCO2	1,4-dioxaspiro[4.4]nonane			300														x								x
+	13f35g	CC1CCC=C(C)C1	1,5-dimethylcyclohex-1-ene			100			x		x																	
+	26cv51	CC1CCCC=C1C	1,6-dimethylcyclohex-1-ene			100			x		x																	
+	3za9t6	CC12C(CC(C(C)2C)CC1)=O	1,7,7-trimethylbicyclo[2.2.1]heptan-2-one		camphor	300	x		x						x													
+	1b05s7	CC(O/C=C/C)CC	2-(prop-1-en-1-yloxy)butane			300					x									x								
+	2d6uvm	CC(C)(C1CCC1(C)C)C	2-(tert-butyl)-1,1-dimethylcyclobutane			200			x	x																		
+	4buoz5	CCCC(C)(Br)C	2-bromo-2-methylpentane			100				x							x											
+	1r6oa3	CCC[C@H](CO)[C@H](CC)CO	(2S,3S)-2-ethyl-3-propyl-butane-1,4-diol			100		x						x														
+	7d3b64	OCC(CC)C(CCC)CO	2-ethyl-3-propylbutane-1,4-diol			100								x														
+	31r437	CCCC(CC)C(O)=O	2-ethylpentanoic acid			100										x												
+	1zuj44	CCCC(O)C#N	2-hydroxypentanenitrile			100												x										
+	4m06i4	CCCC(O)C(O)=O	2-hydroxypentanoic acid			100								x		x												
+	3462o4	OC(C)C(O)=O	2-hydroxypropanoic acid		lactic acid	100								x		x												
+	6mn042	O[C@H]1[C@@H](CC[C@@H](C)C1)C(C)C	(1R,2S,5R)-2-isopropyl-5-methylcyclohexan-1-ol		menthol	100		x	x					x														
+	3ilqu7	OC1C(C(C)C)CCC(C1)C	2-isopropyl-5-methylcyclohexan-1-ol		menthol	100			x					x														
+	3g2493	C=C(C)C(CCCCCC)=C	2-methyl-3-methylenenon-1-ene			200					x																	
+	1bojc9	C=C([C@H]1C[C@@H](C(C)=CC1)O)C	(1S,5R)-2-methyl-5-(prop-1-en-2-yl)cyclohex-2-en-1-ol		carveol	300		x	x		x			x														
+	4wf335	C=C(C)C1CC(O)C(C)=CC1	2-methyl-5-(prop-1-en-2-yl)cyclohex-2-en-1-ol		carveol	300			x		x			x														
+	20e6z1	CC(C)CC	2-methylbutane			100				x																		
+	9cmdh5	CCCC[C@@H](C=O)C	(S)-2-methylhexanal			100		x													x							
+	75tn49	CCCCC(C)C=O	2-methylhexanal			100															x							
+	4b81d4	CC(C)CCCC	2-methylhexane			100				x																		
+	582z61	C=C(C)CCC	2-methylpent-1-ene			100					x																	
+	7ljev1	CCCC(C)(O)C	2-methylpentan-2-ol			100								x														
+	4jzyd7	CC[C@@H](O)C(C)C	(R)-2-methylpentan-3-ol			100		x						x														
+	5mi7l9	CCC(C(C)C)O	2-methylpentan-3-ol			100								x														
+	9sa9s7	CC(C)([C@H](CC)C)C	(S)-2,2,3-trimethylpentane			100		x		x																		
+	5ruuj6	CC(C)(C)C(C)CC	2,2,3-trimethylpentane			100				x																		
+	8diae1	C=C(C(C)(C)C)C	2,3,3-trimethylbut-1-ene			100					x																	
+	3aouu8	C/C(C)=C(\C(C)=C(C)/C)C	2,3,4,5-tetramethylhexa-2,4-diene			100					x																	
+	2yoxk3	O=C1[C@H]([C@@H](CCCC1)C)C	(2S,3R)-2,3-dimethylcycloheptan-1-one			100		x	x						x													
+	29m477	O=C1C(C)C(C)CCCC1	2,3-dimethylcycloheptan-1-one			100			x						x													
+	7r5p27	O[C@H]1C([C@@H]([C@H]([C@@H]1C)C)O)C	(1R,3R,4S,5S)-2,4,5-trimethylcyclopentane-1,3-diol			100		x	x					x														
+	zb3a7c	OC1C(C)C(O)C(C)C1C	2,4,5-trimethylcyclopentane-1,3-diol			100			x					x														
+	76t930	CC(/C=C/C(CC)C)C	(E)-2,5-dimethylhept-3-ene			100		x			x																	
+	4i4w49	CC(C)/C=C/C(C)CC	2,5-dimethylhept-3-ene			100					x																	
+	2dg9mq	CC(CC[C@@H](CC)C)C	(R)-2,5-dimethylheptane			100		x		x																		
+	4qmpd4	CC(C)CCC(C)CC	2,5-dimethylheptane			100				x																		
+	9ir628	CC(C)C(CC(C)(C)C)=O	2,5,5-trimethylhexan-3-one			100									x													
+	29pu45	CC(CC(C[C@@H](CCC)C)=O)C	(R)-2,6-dimethylnonan-4-one			100		x							x													
+	65jjz5	CC(C)CC(CC(C)CCC)=O	2,6-dimethylnonan-4-one			100									x													
+	1kltk2	CCCC(N(CC)CC)=O	N,N-diethylbutyramide	N,N-diethylbutanamide		100																	x					
+	1vgqb1	O=C(O)CC(NCC)=O	3-(ethylamino)-3-oxopropanoic acid			200										x							x					
+	8dp877	CC(C[C@H](CCCl)Br)C	(R)-3-bromo-1-chloro-5-methylhexane			100		x		x							x											
+	3k7hg6	CC(C)CC(Br)CCCl	3-bromo-1-chloro-5-methylhexane			100				x							x											
+	6w8vr3	CCC[C@H](CCCl)Br	(R)-3-bromo-1-chlorohexane			100		x		x							x											
+	4kvwg2	CCCC(Br)CCCl	3-bromo-1-chlorohexane			100				x							x											
+	6f8g39	C[C@H]([C@@H]([C@H](CC)I)Br)Cl	(2R,3S,4S)-3-bromo-2-chloro-4-iodohexane			100		x		x							x											
+	34tup2	CC(Cl)C(Br)C(I)CC	3-bromo-2-chloro-4-iodohexane			100				x							x											
+	7hg2h1	CC[C@]([C@H](C)Br)(C)C#N	(2R,3S)-3-bromo-2-ethyl-2-methylbutanenitrile			100		x									x	x										
+	9v5by4	CCC(C#N)(C(Br)C)C	3-bromo-2-ethyl-2-methylbutanenitrile			100											x	x										
+	671q55	CC[C@H](C[C@H](CCC)CC)Br	(3R,5S)-3-bromo-5-ethyloctane			100		x									x											
+	86o18x	CCC(Br)CC(CC)CCC	3-bromo-5-ethyloctane			100				x							x											
+	2pw243	CCC[C@H](CCO)Br	(R)-3-bromohexan-1-ol			100		x						x														
+	69s5i1	CCCC(Br)CCO	3-bromohexan-1-ol			100								x														
+	9lljj4	CC1(C[C@H](CC1)CCCC)C	(S)-3-butyl-1,1-dimethylcyclopentane			100		x	x	x																		
+	5z1o52	CC1(C)CC(CCCC)CC1	3-butyl-1,1-dimethylcyclopentane			100			x	x																		
+	6xq1w7	CC([C@H](CC(C)=O)CCCC)=O	(S)-3-butylhexane-2,5-dione			100		x							x													
+	4j94q9	CC(C(CCCC)CC(C)=O)=O	3-butylhexane-2,5-dione			100									x													
+	167igp	O=C(O)CC(OCC)=O	3-ethoxy-3-oxopropanoic acid			200										x						x						
+	85f1z7	CC[C@H]1C[C@@H](C)CCC[C@@H](C)[C@H]1C	(1R,2R,3S,5S)-3-ethyl-1,2,5-trimethylcyclooctane			100		x	x	x																		
+	1ead47	CCC1CC(CCCC(C1C)C)C	3-ethyl-1,2,5-trimethylcyclooctane			100			x	x																		
+	7ecgq6	C=C(CC)C(CC)(CC)C	3-ethyl-3-methyl-4-methylenehexane			100					x																	
+	3e9afq	CCCCC[C@@H](C(C)C)C(CC)CC	(S)-3-ethyl-4-isopropylnonane			100		x		x																		
+	1vg1y9	CCCCCC(C(CC)CC)C(C)C	3-ethyl-4-isopropylnonane			100				x																		
+	8zhp51	CCC(CC[C@H](CC)C)CC	(S)-3-ethyl-6-methyloctane			100		x		x																		
+	yj0h3i	CCC(CC)CCC(C)CC	3-ethyl-6-methyloctane			100				x																		
+	1mxuz6	CC/C(=C\C)/CC/C(=C/C)/C	(2E,6E)-3-ethyl-6-methylocta-2,6-diene			100		x			x																	
+	72qjd6	CC/C(=C\C)/CC/C(=C/C)/C	3-ethyl-6-methylocta-2,6-diene			100					x																	
+	8qw107	CC([C@@H](CC)F)C	(R)-3-fluoro-2-methylpentane			100		x		x							x											
+	8x5jh6	CC(C)C(F)CC	3-fluoro-2-methylpentane			100				x							x											
+	964y49	C[C@H](CC(O)=O)O	(R)-3-hydroxybutanoic acid			100		x						x		x												
+	75k0q3	CC(O)CC(O)=O	3-hydroxybutanoic acid			100								x		x												
+	8l5jn7	CC(C1C=CCC=C1)C	3-isopropylcyclohexa-1,4-diene			100			x		x																	
+	2slcf5	CC([C@@H](CCC)OC)C	(R)-3-methoxy-2-methylhexane			100		x												x								
+	1hnk74	CC(C)C(OC)CCC	3-methoxy-2-methylhexane			100														x								
+	84dhn6	CC[C@H](CCC(CC)=C)C	(R)-3-methyl-6-methyleneoctane			100		x			x																	
+	7k21t9	CCC(C)CCC(CC)=C	3-methyl-6-methyleneoctane			100					x																	
+	4gzr84	CC(C(C)C)=O	3-methylbutan-2-one			100									x													
+	l0z45p	CC(C)CC=O	3-methylbutanal			100															x							
+	1hp1o4	C[C@@H]1C=CCCC1	(S)-3-methylcyclohex-1-ene			100		x	x		x																	
+	q28m31	CC1C=CCCC1	3-methylcyclohexene			100			x		x																	
+	7wyi74	CC1=CC(CC1)=O	3-methylcyclopent-2-en-1-one	3-methylcyclopent-2-enone		100			x		x				x													
+	5qx0g3	CC[C@@H](CCCC)C	(S)-3-methylheptane			100		x		x																		
+	2utef1	CCC(C)CCCC	3-methylheptane			100				x																		
+	295ez7	C/C=C/C(C)CCN	(E)-3-methylhex-4-en-1-amine			100		x			x								x									
+	2nqp81	C/C=C/C(C)CCN	3-methylhex-4-en-1-amine			100					x								x									
+	2pkvb5	C/C=C/[C@H](CC=O)C	(S,E)-3-methylhex-4-enal			100		x			x										x							
+	9xa718	C/C=C/C(C)CC=O	3-methylhex-4-enal			100					x										x							
+	5893k5	C/C=C/C(C)=C/C(O)=O	(2E,4E)-3-methylhexa-2,4-dienoic acid			100		x			x					x												
+	3w7kx8	C/C=C/C(C)=C/C(O)=O	3-methylhexa-2,4-dienoic acid			100					x					x												
+	9mc6h4	O=C(O)/C=C(C)/CC(O)=O	(E)-3-methylpent-2-enedioic acid			100		x			x					x												
+	9jtji9	O=C(O)/C=C(C)/CC(O)=O	3-methylpent-2-enedioic acid			100					x					x												
+	5ogqyw	O=CCC(C)CC=O	3-methylpentanedial			100															x							
+	285tp2	CC1(C)C#CCCCC1	3,3-dimethylcyclohept-1-yne	3,3-dimethylcycloheptyne		100			x			x																
+	6d6hr4	CCC(C)(C)CCC	3,3-dimethylhexane			100				x																		
+	7e8n39	CCCC(CCC)[C@H](CC)C(CC)CC	(R)-3,4-diethyl-5-propyloctane			100		x		x																		
+	923rh5	CCCC(C(C(CC)CC)CC)CCC	3,4-diethyl-5-propyloctane			100				x																		
+	8jgg85	O=CC[C@@H](CCO)O	(R)-3,5-dihydroxypentanal			100								x							x							
+	41l5f6	O=CCC(O)CCO	3,5-dihydroxypentanal			100								x							x							
+	1l3xe8	CC[C@@H](C(/C(C)=C/[C@H](CC)C)=O)C	(3S,7S,E)-3,5,7-trimethylnon-5-en-4-one			100		x			x				x													
+	2bz566	CCC(C)C(/C(C)=C/C(C)CC)=O	3,5,7-trimethylnon-5-en-4-one			100					x				x													
+	9o3w29	C=CC(I)CCCI	3,6-diiodohex-1-ene			100					x						x											
+	r1i03d	C#C[C@@H](C/C=C(C)\C)C	(R)-3,6-dimethylhept-5-en-1-yne			100		x			x	x																
+	45gim8	C#CC(C)C/C=C(C)\C	3,6-dimethylhept-5-en-1-yne			100					x	x																
+	70ow32	C#CC(C)CCC(C)CC	3,6-dimethyloct-1-yne			100					x																	
+	6jy3wq	CC[C@@H](CC[C@@H](CC)C)C	(3R,6S)-3,6-dimethyloctane			100		x		x																		
+	40v7e6	CCC(C)CCC(C)CC	3,6-dimethyloctane			100				x																		
+	26m513	CC(C[C@H](CCC)CC)C	(S)-4-ethyl-2-methylheptane			100		x		x																		
+	4b7yv5	CC(C)CC(CC)CCC	4-ethyl-2-methylheptane			100				x																		
+	580ysd	CC[C@H]([C@@H](CC=O)C)F	(3R,4R)-4-fluoro-3-methylhexanal			100		x									x				x							
+	7swcnu	CCC(F)C(C)CC=O	4-fluoro-3-methylhexanal			100											x				x							
+	7xzcn6	CC([C@@H](CCC(O)=O)O)C	(R)-4-hydroxy-5-methylhexanoic acid			100		x						x		x												
+	61bop6	CC(C)C(O)CCC(=O)O	4-hydroxy-5-methylhexanoic acid			100								x		x												
+	b7yg1y	IC1CC=CCC1	4-iodocyclohex-1-ene	4-iodocyclohexene		100			x		x						x											
+	2i10h1	CC(N)C/C(C)=C/C	(E)-4-methylhex-4-en-2-amine			100		x			x								x									
+	29kyf5	CC(N)C/C(C)=C/C	4-methylhex-4-en-2-amine			100					x								x									
+	3f2y12	C/C=C/C(CC)(CC)CCC	(E)-4,4-diethylhept-2-ene			100		x			x																	
+	36qhvi	C/C=C/C(CC)(CC)CCC	4,4-diethylhept-2-ene			100					x																	
+	9e0el7	C=CC[C@H](CCCl)Cl	(R)-4,6-dichlorohex-1-ene			100		x			x						x											
+	1de159	C=CCC(Cl)CCCl	4,6-dichlorohex-1-ene			100					x						x											
+	82dvv9	O=C(C[C@H](CCBr)O)O	(R)-5-bromo-3-hydroxypentanoic acid			100		x						x		x	x											
+	4khja5	O=C(O)CC(O)CCBr	5-bromo-3-hydroxypentanoic acid			100								x		x	x											
+	mmsr42	CC1(C)C=CC(CCCC)C1	5-butyl-3,3-dimethylcyclopent-1-ene	5-butyl-3,3-dimethylcyclopentene		100			x		x																	
+	8nim6f	CC(CC[C@H](CC)Cl)C	(S)-5-chloro-2-methylheptane			100		x									x											
+	2p1rc6	CC(C)CCC(Cl)CC	5-chloro-2-methylheptane			100											x											
+	5vg428	C[C@@H](/C=C/CC=O)Cl	(S,E)-5-chlorohex-3-enal			100		x			x						x				x							
+	7xygqm	CC(Cl)/C=C/CC=O	5-chlorohex-3-enal			100					x						x				x							
+	8v1p5b	CC[C@H]1CCC=C(C)C1	(S)-5-ethyl-1-methylcyclohex-1-ene			100		x	x		x																	
+	4s7fj8	CCC1CCC=C(C1)C	5-ethyl-1-methylcyclohex-1-ene	5-ethyl-1-methylcyclohexene		100			x		x																	
+	90dbg6	C[C@@H](/C=C/C(C)=C/C)O	(S,3E,5E)-5-methylhepta-3,5-dien-2-ol			100		x			x			x														
+	9jc0a1	CC(O)/C=C/C(C)=C/C	5-methylhepta-3,5-dien-2-ol			100					x			x														
+	7sdexz	CC(C)CCC#CN	5-methylhex-1-yn-1-amine			100						x							x									
+	u0od2y	CCC[C@H](C/C=C/C=O)C	(R,E)-5-methyloct-2-enal			100		x			x										x							
+	59m14u	CCCC(C)C/C=C/C=O	5-methyloct-2-enal			100					x										x							
+	rmaf9s	CCC(C[C@H](/C=C/C)C)=O	(R,E)-5-methyloct-6-en-3-one			100		x			x				x													
+	771oi8	CCC(CC(C)/C=C/C)=O	5-methyloct-6-en-3-one			100					x				x													
+	6xirv8	C[C@H](/C(CCCC)=C\C(Br)([C@H](C)O)Br)O	(2R,6S,Z)-5,5-dibromo-3-butylhept-3-ene-2,6-diol			200		x			x			x			x											
+	9se4s1	CC(O)/C(CCCC)=C\C(Br)(Br)C(O)C	5,5-dibromo-3-butylhept-3-ene-2,6-diol			100					x			x			x											
+	1m1bm9	C[C@@H](C(CC(Br)([C@@H](C)O)Br)CCCC)O	(2R,6S)-3,3-dibromo-5-butylheptane-2,6-diol			100		x						x			x											
+	88anw9	CC(O)C(CCCC)CC(Br)(Br)C(O)C	3,3-dibromo-5-butylheptane-2,6-diol			100								x			x											
+	3vywi5	OCCCCC(F)C(I)CF	5,7-difluoro-6-iodoheptan-1-ol			100								x			x											
+	6e0ut1	CCC(C/C(C(CCC=C)/C(CCCCC)=C/CC)=C\C)=C	6-(but-3-en-1-yl)-5-ethylidene-3-methylene-7-propylidenedodecane			300					x																	
+	k3gj1j	CC[C@@H](CC[C@H](CCC)CC)C	(3S,6S)-6-ethyl-3-methylnonane			100		x		x																		
+	9r5mb1	CCC(C)CCC(CC)CCC	6-ethyl-3-methylnonane			100				x																		
+	4f5xj5	C/C=C(CC/C(C)=C/C)\CC	(2E,6E)-3-ethyl-6-methylocta-2,6-diene			100		x			x																	
+	532fq8	C/C=C(CC)/CC/C(C)=C/C	3-ethyl-6-methylocta-2,6-diene			100					x																	
+	8d6kw9	CCC(CCCO)=O	6-hydroxyhexan-3-one			100								x	x													
+	7tgaa3	CCC(CC[C@@H](CC)O)=O	(R)-6-hydroxyoctan-3-one			100		x						x	x													
+	8ae2ot	CCC(CCC(O)CC)=O	6-hydroxyoctan-3-one			100								x	x													
+	535ov6	CC[C@@H](CCC(C)C)O	(S)-6-methylheptan-3-ol			100		x						x														
+	83sel3	CCC(O)CCC(C)C	6-methylheptan-3-ol			100								x														
+	8pi689	C/C=C/C=C/C=C/C(C)C	8-methylnona-2,4,6-triene  			100					x																	
+	9p0cy7	NC1=CC=CC=C1	aminobenzene		aniline	100			x				x						x									
+	1jbak3	CC(OCC1=CC=CC=C1)=O	benzyl ethanoate	benzyl acetate		100			x				x									x						
+	9xwxg9	CCCC(O)=O	butanoic acid		butyric acid	100										x												
+	8ddl15	CC(OCCCC)=O	butyl ethanoate	butyl acetate		100																x						
+	8mxmb5	CCCC=O	butanal	butyraldehyde		100															x							
+	856nl2	CCCC(N)=O	butanamide	butyramide	CCCC(N)=O	100																	x					
+	1pmzy6	OC1CCC=CCC1	cyclohept-4-en-1-ol	cyclohept-4-enol		100			x		x			x														
+	3ez7b8	S[C@H]1C=CCCC1	(R)-cyclohex-2-ene-1-thiol			100		x	x		x															x		
+	2tu4e4	SC1C=CCCC1	cyclohex-2-ene-1-thiol	cyclohex-2-enethiol		100			x		x															x		
+	9cx0g8	O[C@@H]1C=CCCC1	(S)-cyclohex-2-en-1-ol			100		x	x		x			x														
+	2lg8z2	OC1C=CCCC1	cyclohex-2-en-1-ol	cyclohex-2-enol		100			x		x			x														
+	9podb2	C1CCCCC1	cyclohexane			100			x	x																		
+	9eg1o4	OC1CCCCC1	cyclohexanol			100			x					x														
+	6yu644	O/N=C1CCCCC/1	cyclohexanone oxime			200			x																			x
+	6h2asd	CCSCC	diethylsulfane		diethyl sulfide	100																						x
+	9a9bt9	CCCNCCC	N,N-dipropylamine	N-Propylpropan-1-amine	dipropylamine	100													x									
+	z1031t	CC(O)=O	ethanoic acid	acetic acid		100										x												
+	8wjmt8	CCOCC	ethoxyethane	diethyl ether		100														x								
+	8yjj62	CC[C@@H]([C@H](C(OCC)=O)C)Cl	ethyl (2S,3S)-3-chloro-2-methylpentanoate			200		x									x					x						
+	4xj4o6	CCC(Cl)C(C)C(OCC)=O	ethyl 3-chloro-2-methylpentanoate			200											x					x						
+	8c3y05	CCCC(OCC)=O	ethyl butanoate	ethyl butyrate		100																x						
+	4kg9c9	CCC(=O)OCC	ethyl propanoate	ethyl propionate		100																x						
+	10gpo1	CSCC	ethyl(methyl)sulfane	ethyl methyl sulfide		200																						x
+	86ski5	CCC1CCCCC1	ethylcyclohexane			100			x	x																		
+	9tp3s4	NNCC	ethylhydrazine			100																						x
+	4b81z9	FC1CCCCC1	fluorocyclohexane			100			x	x							x											
+	6zint9	CC/C=C/CCC	(E)-hept-3-ene			100		x			x																	
+	6a39e7	CC/C=C/CCC	hept-3-ene			100					x																	
+	89ol95	CCC#CCCC	hept-3-yne			100						x																
+	726729	CCCC(CCC)=O	heptan-4-one			100									x													
+	6dov73	CCCCCCC	heptane			100				x																		
+	btfa8y	CCC/C=C/CO	(E)-hex-2-en-1-ol			100		x			x			x														
+	3pree2	CCC/C=C/CO	hex-2-en-1-ol			100					x			x														
+	4sjis3	C=CC[C@H](CCO)O	(R)-hex-5-ene-1,3-diol			100		x			x			x														
+	3s9rf4	C=CCC(O)CCO	hex-5-ene-1,3-diol			100					x			x														
+	38xe68	CCCCCCO	hexan-1-ol			100								x														
+	26mq7m	CC[C@H](CCC)N	(R)-hexan-3-amine			100		x											x									
+	98kxj3	CCC(N)CCC	hexan-3-amine			100													x									
+	6p6r51	CCCCCC=O	hexanal	Hexanaldehyde	caproic aldehyde	100															x							
+	48pzw7	CCC[C@@H](CCO)O	(S)-hexane-1,3-diol			100		x						x														
+	54h395	CCCC(O)CCO	hexane-1,3-diol			100								x														
+	7oy953	CC[C@@H](CCCN)N	(S)-hexane-1,4-diamine			100		x											x									
+	3dpls2	CCC(N)CCCN	hexane-1,4-diamine			100													x									
+	96k5h9	CCCCCC(O)=O	hexanoic acid		caproic acid	100										x												
+	5u4c99	OC1=CC=CC=C1	hydroxybenzene		phenol	100	x						x	x														
+	2vais7	O=COCC(C)C	isobutyl methanoate	isobutyl formate		100																x						
+	4gsnk9	CC(C)Cc1ccccc1	isobutylbenzene			100							x															
+	9aing6	C=CC(C)=C	2-methylbuta-1,3-diene		isoprene	100	x				x																	
+	k4924l	C(O)=O	methanoic acid		formic acid	100										x												
+	78ih89	CS	methanthiol			100																				x		
+	4scfl9	NC1=CC(Cl)=CC=C1	m-aminochlorobenzene	1-amino-3-chlorobenzene	3-chloroaniline	100	x						x				x		x									
+	8a9c67	CCOC	methoxyethane		ethyl methyl ether	100														x								
+	3zpwd8	C=C/C=C(C)/C(OC)=O	methyl 2-methylpenta-2,4-dienoate			200					x											x						
+	944tj6	CCCC(OC)=O	methyl butyrate	methyl butanoate		100																x						
+	8ndol4	CC1=CC=CC=C1	methylbenzene	1-methylbenzene	toluene	100	x						x															
+	49ozg3	C1=CC=CC=C1	benzene			100							x															
+	m2km6q	CCC1=CC=CC(C)=C1	1-ethyl-3-methylbenzene		o-ethyltoluene	100	x						x															
+	1cjjb6	[O-][N+](C1=CC=C(C)C=C1)=O	1-methyl-4-nitrobenzene	4-nitrotoluene		100							x															x
+	62adw1	C1=C(C)C(C)=CC=C1	1,2-dimethylbenzene	o-dimethylbenzene	o-xylene	100	x						x															
+	3v3ml1	CC1=CC=CC(C)=C1	1,3-dimethylbenzene	m-dimethylbenzene	m-xylene	100	x						x															
+	6v3ja3	CC1=CC=C(C)C=C1	1,4-dimethylbenzene	p-dimethylbenzene	p-xylene	100	x						x															
+	8a9gd9	CCNC	N­-methylethanamine	N­-ethyl-­N-­methylamine		100													x									
+	9fv9p4	CCCCCN(CC)C	N-ethyl-N-methylpentan-1-amine	N-ethyl-N-methylpentanamine		100													x									
+	1zd0v8	CC(C)CC(N(CC)C)=O	N-ethyl-N,3-dimethylbutanamide			200																	x					
+	99rjo8	CCCN(C)CCC	N-methyl-N-propylpropan-1-amine			100													x									
+	4bo83n	CCCNC	N-methylpropan-1-amine	N-methylpropanamine		100					x								x									
+	1iocr5	CC(NC=C)=O	N-vinylacetamide			200					x												x					
+	3trjc2	C/C=C/C(C)CNC	N,2-dimethylpent-3-en-1-amine	N,2-dimethylpent-3-enamine		100					x								x									
+	75zod6	C/C=C/C(C)CNC	(E)-N,2-dimethylpent-3-en-1-amine	(E)-N,2-dimethylpent-3-enamine		100		x			x								x									
+	8qbdt4	CCCC(N(CC)CC)=O	N,N-diethylbutyramide	N,N-diethylbutanamide		100																	x					
+	9uy3t6	CC#CCCN(C)C	N,N-dimethylpent-3-yn-1-amine	N,N-dimethylpent-3-ynamine		100						x							x									
+	3du9q6	C/C=C(C)/CN(C)C	N,N,2-trimethylbut-2-en-1-amine	N,N,2-trimethylbut-2-enamine		100					x								x									
+	5yap57	C/C=C(C)/CN(C)C	(E)-N,N,2-trimethylbut-2-en-1-amine	(E)-N,N,2-trimethylbut-2-enamine		100		x			x								x									
+	9wct39	O=[N+](C1=CC=CC=C1)[O-]	nitrobenzene			100							x															x
+	77qs91	CC/C=C/[C@H](CCCO)O	(S,E)-oct-5-ene-1,4-diol			100		x			x			x														
+	6zmyk4	CC/C=C/C(O)CCCO	oct-5-ene-1,4-diol			100					x			x														
+	18bjt8	CC(OCCCCCCCC)=O	octyl ethanoate	octyl acetate		100																x						
+	1ji0r3	C/C=C/CCO	(E)-pent-3-en-1-ol			100		x			x			x														
+	4im9s3	C/C=C/CCO	pent-3-en-1-ol			100					x			x														
+	5bus19	CC(CCC)=O	pentan-2-one			100									x													
+	8jmru8	CC(C)CC(OC(CCC)C)=O	pentan-2-yl 3-methylbutanoate			200																x						
+	969tk9	CCC(S)CC	pentane-3-thiol			100																				x		
+	2igt58	CC(OCCCCC)=O	pentyl acetate			100																x						
+	12we89	CCCC(OCCCCC)=O	pentyl butanoate	penty butyrate		100																x						
+	1pt1n1	CCCCC(OCCCCC)=O	pentyl pentanoate			100																x						
+	5l4yo3	C=CC1=CC=CC=C1	phenylethene		styrene	100	x				x		x															
+	92xbu4	O=Cc1ccccc1	phenylmethanal		benzaldehyde	100	x						x								x							
+	5k7k45	CCCN	propan-1-amine	propylamine		100													x									
+	6r4jc5	CCCO	propan-1-ol		n-propanol	100								x														
+	3yfif8	CC(C)=N	propan-2-imine			100																		x				
+	8uj7d3	CCC#N	propanenitrile	propionitrile		100												x										
+	33ck02	CCC(O)=O	propanoic acid		propionic acid	100										x												
+	7f3hh6	O=C(CBr)C(Br)(Br)Br	1,1,1,3-tetrabromopropan-2-one			100									x		x											
+	9ax8j9	CC(OC=C)=O	vinyl acetate			100					x											x						
+	7apmn2	OC(=O)CCCCC(=O)O	hexanedioic acid		adipic acid	100	x									x												
+	9l9k92	C1=NC=CN1	1H-imidazole		imidazole	200	x																				x	
+	7hcqm7	C12=C(NC=C2)C=CC=C1	1H-indole		indole	200	x																				x	
+	9iuj88	C1=NC=CC=C1	pyridine		pyridine	100	x																				x	
+	9ev2e1	N1C=CC=C1	1H-pyrrole		pyrrole	200	x																				x	
+	3fzx43	OC(=O)C(=O)O	ethandioic acid		oxalic acid	100	x									x												
+	3nqm3j	OC(=O)CC(=O)O	propanedioic acid		malonic acid	100	x									x												
+	6hsr2q	OC(=O)CCC(=O)O	butanedioic acid		succinic acid	100	x									x												
+	4wann5	OC(=O)CCCC(=O)O	pentandioic acid		glutaric acid	100	x									x												
+	r037i3	O=C(O)c1ccccc1O	2-hydroxybenzoic acid		salicylic acid	100	x						x	x		x												
+	442ep8	O=C(O)c1ccccc1	benzoic acid	benzencarboxylic acid		100							x			x												
+	6lp9z2	OC(c1ccccc1OC(C)=O)=O	2-acetoxybenzoic acid	o-acetoxybenzoic acid	aspirin	100	x						x			x						x						
+	40cy23	COc1ccccc1	methoxybenzene		anisole	100	x						x							x								
+	40tpu9																											
+	3rsi13																											
+	51fzi4																											
+	9hqgb1																											
+	5yw22j																											
+	4sua56																											
+	4j4i47																											
+	3w9s36																											
+	9kbtc6																											
+	8x8qm8																											
+	9heka3																											
+	16exs5																											
+	91sr3i																											
+	7mwvp9																											
+	2pyu04																											
+	64rml8																											
+	9olgy6																											
+	1wy8gn																											
+	24ide7																											
+	3a3qu1																											
+	45hsn5																											
+	ai733z																											
+	9mowa4																											
+	7hr823																											
+	1eghe2																											
+	1tkob8																											
+	9alm33																											
+	64zju7																											
+	5lfokh																											
+	2htbx4																											
+	2o3988																											
+	79z247																											
+	3hfjr1																											
+	8hsgl1																											
+	3wgs29																											
+	71rcz3																											
+	5kca33																											
+	74ckt6																											
+	55vbz7																											
+	425s59																											
+	99kzm8																											
+	4xsxn1																											
+	51o0an																											
+	65g105																											
+	68a5k8																											
+	5df7j2																											
+	6qix3t																											
+	4qpoz7																											
+	ki32p4																											
+	6u60b2																											
+	86po64																											
+	2j1ew7																											
+	6qtn38																											
+	ljvm17																											
+	2ptx1c																											
+	9bjup3																											
+	5xrng9																											
+	62wlu3																											
+	2v7yt9																											
+	9w0ui3																											
+	6n9pd2																											
+	705xc8																											
+	1o4u34																											
+	831j98																											
+	3n9t98																											
+	6ovx55																											
+	5xa3m2																											
+	7pp3j6																											
+	460di5																											
+	3vwn63																											
+	5v2zej																											
+	2b4e54																											
+	9cdu38																											
+	7l1el1																											
+	8yrgl6																											
+	5qkb27																											
+	9bjt2c																											
+	59qhq2																											
+	11w726																											
+	8zn8c7																											
+	603rj8																											
+	9cmsbf																											
+	37hea4																											
+	48rje8																											
+	7mcjo2																											
+	4b4te1																											
+	9ue271																											
+	6qg855																											
+	8xw87j																											
+	35x9e9																											
+	61awgq																											
+	2mtxq9																											
+	3m65w4																											
+	d4z75k																											
+	iuyz41																											
+	62m6hf																											
+	27o772																											
+	4dkvj4																											
+	l6tm3t																											
+	471mm3																											
+	1f4mr6																											
+	74aiy7																											
+	8g1vj2																											
+	19lbe4																											
+	64hhf2																											
+	84p807																											
+	2kva35																											
+	1gyqv2																											
+	5jb8y9																											
+	6lnpo6																											
+	18c5u6																											
+	34xyz1																											
+	7537c6																											
+	3vrhy8																											
+	8fisr9																											
+	4r66y2																											
+	6c3784																											
+	5qhz2g																											
+	5hlyr4																											
+	8thmh3																											
+	45ep87																											
+	1grmk9																											
+	61w4b5																											
+	453395																											
+	1kg07s																											
+	gq2j9p																											
+	1mg272																											
+	y4c9gd																											
+	1mg114																											
+	4f07g5																											
+	ao601d																											
+	9z66lx																											
+	4kdff5																											
+	1wqkja																											
+	8t85t5																											
+	1deya7																											
+	95a1l4																											
+	winq7h																											
+	9yk763																											
+	8krc06																											
+	6s48o1																											
+	6hj1w2																											
+	7crgx6																											
+	67ck21																											
+	7r3rd9																											
+	68ti2l																											
+	1sqkq1																											
+	4m4jf8																											
+	1clcbb																											
+	9bnug2																											
+	4f7ho1																											
+	7pn95h																											
+	7gh4r9																											
+	rpdw8w																											
+	27o3w6																											
+	9pmwc7																											
+	4vvcrt																											
+	4x0279																											
+	5qzfo6																											
+	21lal4																											
+	3nr4r4																											
+	6mchi1																											
+	8f4ij5																											
+	3y6cj1																											
+	9ubf48																											
+	76ut73																											
+	27sru2																											
+	7u9jf1																											
+	2v2rm3																											
+	7hk7g3																											
+	5ficf9																											
+	2bbxl3																											
+	5woiu8																											
+	41dd73																											
+	53zdr8																											
+	2ed9i9																											
+	50mlm8																											
+	8zkf15																											
+	5tbvl3																											
+	55jlf1																											
+	12dut5																											
+	90bhq4																											
+	161f83																											
+	1r1dsq																											
+	76rxl8																											
+	38zf27																											
+	7uj0p1																											
+	7wcbv6																											
+	9c96jd																											
+	6oxv09																											
+	5bkeg2																											
+	1z8qq5																											
+	k4ch2c																											
+	697nt4																											
+	3c81y6																											
+	2eeif3																											
+	1wm9s3																											
+	2b5va5																											
+	1znge8																											
+	6r7l74																											
+	6qkwc2																											
+	1tuwtn																											
+	2xxy66																											
+	1wr2b6																											
+	3k3235																											
+	44fi57																											
+	13nbu3																											
+	9lf2ku																											
+	844ye2																											
+	168s64																											
+	4wcjs1																											
+	25mv89																											
+	7hgg18																											
+	9ws12w																											
+	7d6ql2																											
+	9yvvy5																											
+	siz19d																											
+	7xy026																											
+	4vhg31																											
+	3j0en3																											
+	3atvkk																											
+	1y5e1f																											
+	4cl5y8																											
+	2l3l7w																											
+	8wxh7e																											
+	u6w48l																											
+	8buot4																											
+	75rjl7																											
+	2ndj32																											
+	2os752																											
+	6498e1																											
+	9i32h4																											
+	25n8i2																											
+	84wy35																											
+	7gkph2																											
+	6a3ce8																											
+	6li0f5																											
+	2oda94																											
+	2nspt3																											
+	2fq211																											
+	jzji4x																											
+	7uuav6																											
+	5t0l71																											
+	6m8zx1																											
+	9yq095																											
+	sua67l																											
+	5bnds2																											
+	5ivxgl																											
+	208pa4																											
+	77lrd1																											
+	2kersv																											
+	1fs7l9																											
+	7npon6																											
+	54h0b4																											
+	2c6rn7																											
+	8zwq8k																											
+	4fzmr5																											
+	5khf17																											

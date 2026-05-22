@@ -1,0 +1,8 @@
+CHANGELOG.md
+coverage
+dist
+node_modules
+package-lock.json
+playwright-report
+src/data/molecules.generated.ts
+test-results
