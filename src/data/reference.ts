@@ -1,17 +1,12 @@
 /**
- * One row in the cheatsheet — usually a syntax fragment in the left
- * column and a short explanation in the right column.
+ * One row in a simple two-column reference table — left cell holds a
+ * short syntax fragment, right cell its description.
  */
 export interface ReferenceItem {
   /** Token shown in the left cell of the table. */
   syntax: string;
   /** Short description shown in the right cell. */
   description: string;
-}
-
-export interface ReferenceSection {
-  title: string;
-  items: ReferenceItem[];
 }
 
 /**
@@ -32,100 +27,131 @@ export const CHAIN_LENGTHS: ReferenceItem[] = [
 ];
 
 /**
- * The nine rules from the IUPAC course handout, condensed to one line each
- * so they can be printed on a single sheet.
+ * Stereodescriptors as a flat reference table — pushed to the end of the
+ * cheatsheet because they only matter once the basics are settled.
  */
-export const NAMING_RULES: ReferenceItem[] = [
+export const STEREODESCRIPTORS: ReferenceItem[] = [
+  { syntax: '(E)- / (Z)-', description: 'double-bond geometry (CIP rules)' },
   {
-    syntax: 'Rule 1',
-    description:
-      'Pick the longest carbon chain that carries the most suffix functions — that is the root.',
+    syntax: '(R)- / (S)-',
+    description: 'absolute configuration of a stereocenter',
   },
+  { syntax: 'cis- / trans-', description: 'relative on a ring (older form)' },
   {
-    syntax: 'Rule 2',
-    description:
-      'In case of a tie, take the chain with the most unsaturations.',
-  },
-  {
-    syntax: 'Rule 3',
-    description: 'Number the chain so the senior suffix has the lowest locant.',
-  },
-  {
-    syntax: 'Rule 4',
-    description:
-      'On a tie, give the lowest locant to the unsaturation (-ene / -yne).',
-  },
-  {
-    syntax: 'Rule 5',
-    description: 'Substituents are listed alphabetically before the root.',
-  },
-  {
-    syntax: 'Rule 6',
-    description:
-      'Pick the locant set giving the lowest first-different number (compare term by term).',
-  },
-  {
-    syntax: 'Rule 7',
-    description:
-      'Same substituent multiple times → use di, tri, tetra… (does not count for alphabetical order).',
-  },
-  {
-    syntax: 'Rule 8',
-    description:
-      'Insert "a" or "e" before a suffix to avoid two consonants (propa-1,2-diene; pentane-2,3-diol).',
-  },
-  {
-    syntax: 'Rule 9',
-    description:
-      'Branched groups can use iso-, sec-, tert-. sec- and tert- are written in parentheses and do not count alphabetically; iso- does.',
+    syntax: 'erythro / threo',
+    description: 'relative two-center descriptors (historical)',
   },
 ];
 
 /**
- * Cheatsheet block layout — a list of sections rendered side-by-side.
+ * A branched / unsaturated substituent shown in the cheatsheet — common name,
+ * formula (rendered via react-mf for proper subscripts), systematic IUPAC
+ * name, and a SMILES with `*` as the R-group attachment point so a structure
+ * can be drawn with an R label on the connecting bond.
  */
-export const REFERENCE_SECTIONS: ReferenceSection[] = [
-  { title: 'Chain length', items: CHAIN_LENGTHS },
-  { title: 'Naming rules (in order of application)', items: NAMING_RULES },
+export interface BranchedSubstituent {
+  /** Common / trivial name (e.g. "isopropyl"). */
+  name: string;
+  /** Alternate common name in parentheses, when applicable (e.g. "isoamyl"). */
+  altName?: string;
+  /** Molecular formula in the `react-mf` input string format, with R for the attachment. */
+  formula: string;
+  /** Systematic IUPAC name (e.g. "propan-2-yl"). */
+  systematic: string;
+  /** SMILES using `*` as the R-group attachment point. */
+  smiles: string;
+  /** Short note (e.g. alphabetical-counting quirks). */
+  note?: string;
+}
+
+/**
+ * Branched / unsaturated common substituents, with R-group structures, taken
+ * from the IUPAC organic-nomenclature course handout.
+ */
+export const BRANCHED_SUBSTITUENTS: BranchedSubstituent[] = [
   {
-    title: 'Stereodescriptors',
-    items: [
-      {
-        syntax: '(E)- / (Z)-',
-        description: 'double-bond geometry (CIP rules)',
-      },
-      {
-        syntax: '(R)- / (S)-',
-        description: 'absolute configuration of a stereocenter',
-      },
-      {
-        syntax: 'cis- / trans-',
-        description: 'relative on a ring (older form)',
-      },
-      {
-        syntax: 'erythro / threo',
-        description: 'relative two-center descriptors (historical)',
-      },
-    ],
+    name: 'isopropyl',
+    formula: '(CH3)2CHR',
+    systematic: 'propan-2-yl',
+    smiles: '*C(C)C',
   },
   {
-    title: 'Common branched substituents',
-    items: [
-      { syntax: 'isopropyl', description: '(CH₃)₂CH–' },
-      { syntax: 'isobutyl', description: '(CH₃)₂CHCH₂–' },
-      {
-        syntax: 'sec-butyl',
-        description: 'CH₃CH₂CH(CH₃)– (counts alphabetically as "b")',
-      },
-      {
-        syntax: 'tert-butyl',
-        description: '(CH₃)₃C– (counts alphabetically as "b")',
-      },
-      { syntax: 'phenyl', description: 'C₆H₅– (benzene as substituent)' },
-      { syntax: 'benzyl', description: 'C₆H₅CH₂– (phenyl + CH₂)' },
-      { syntax: 'vinyl', description: 'CH₂=CH–' },
-      { syntax: 'allyl', description: 'CH₂=CHCH₂–' },
-    ],
+    name: 'isobutyl',
+    formula: '(CH3)2CHCH2R',
+    systematic: '2-methylpropyl',
+    smiles: '*CC(C)C',
+  },
+  {
+    name: 'sec-butyl',
+    formula: 'CH3CH2CH(CH3)R',
+    systematic: 'butan-2-yl',
+    smiles: '*C(C)CC',
+    note: 'counts alphabetically as "b"',
+  },
+  {
+    name: 'tert-butyl',
+    formula: '(CH3)3CR',
+    systematic: '2-methylpropan-2-yl',
+    smiles: '*C(C)(C)C',
+    note: 'counts alphabetically as "b"',
+  },
+  {
+    name: 'isopentyl',
+    altName: 'isoamyl',
+    formula: '(CH3)2CHCH2CH2R',
+    systematic: '3-methylbutyl',
+    smiles: '*CCC(C)C',
+  },
+  {
+    name: 'neopentyl',
+    formula: '(CH3)3CCH2R',
+    systematic: '2,2-dimethylpropyl',
+    smiles: '*CC(C)(C)C',
+  },
+  {
+    name: 'tert-pentyl',
+    altName: 'tert-amyl',
+    formula: 'CH3CH2C(CH3)2R',
+    systematic: '2-methylbutan-2-yl',
+    smiles: '*C(C)(C)CC',
+    note: 'counts alphabetically as "p"',
+  },
+  {
+    name: 'phenyl',
+    formula: 'C6H5R',
+    systematic: 'phenyl',
+    smiles: '*c1ccccc1',
+    note: 'benzene as substituent',
+  },
+  {
+    name: 'benzyl',
+    formula: 'C6H5CH2R',
+    systematic: 'phenylmethyl',
+    smiles: '*Cc1ccccc1',
+  },
+  {
+    name: 'vinyl',
+    formula: 'CH2=CHR',
+    systematic: 'ethenyl',
+    smiles: '*C=C',
+  },
+  {
+    name: 'allyl',
+    formula: 'CH2=CHCH2R',
+    systematic: 'prop-2-en-1-yl',
+    smiles: '*CC=C',
+  },
+  {
+    name: 'isopropenyl',
+    formula: 'CH2=C(CH3)R',
+    systematic: 'prop-1-en-2-yl',
+    smiles: '*C(=C)C',
+  },
+  {
+    name: 'propargyl',
+    formula: 'HC#CCH2R',
+    systematic: 'prop-2-yn-1-yl',
+    smiles: '*CC#C',
   },
 ];
 
