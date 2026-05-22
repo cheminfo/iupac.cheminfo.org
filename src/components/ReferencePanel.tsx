@@ -49,6 +49,47 @@ function RGroupStructure({
 }
 
 /**
+ * Render a molecule and overlay IUPAC locants on the requested atoms.
+ * Locants are set via OCL custom labels using the `]N` prefix, which shows
+ * the number as a small superscript at the top-left of the atom position
+ * without replacing the underlying atom symbol.
+ * @param props - Component props.
+ * @param props.smiles - SMILES to render.
+ * @param props.numbering - Map from atom index to locant number to display.
+ * @param props.width - SVG width in pixels.
+ * @param props.height - SVG height in pixels.
+ * @returns The structure SVG with locants drawn next to the relevant atoms.
+ */
+function NumberedStructure({
+  smiles,
+  numbering,
+  width,
+  height,
+}: {
+  smiles: string;
+  numbering: Record<number, number>;
+  width: number;
+  height: number;
+}) {
+  const molecule = useMemo(() => {
+    const mol = Molecule.fromSmiles(smiles);
+    for (const [atomIndex, locant] of Object.entries(numbering)) {
+      mol.setAtomCustomLabel(Number(atomIndex), `]${locant}`);
+    }
+    return mol;
+  }, [smiles, numbering]);
+  return (
+    <SvgRenderer
+      molecule={molecule}
+      width={width}
+      height={height}
+      factorTextSize={1.1}
+      noCarbonLabelWithCustomLabel
+    />
+  );
+}
+
+/**
  * Two-column reference table used for chain lengths and stereodescriptors.
  * @param props - Component props.
  * @param props.items - Rows to render.
@@ -259,11 +300,20 @@ export function ReferencePanel() {
                     <Icon icon="tick" size={12} /> Example
                   </div>
                   {rule.good.smiles ? (
-                    <SmilesSvgRenderer
-                      smiles={rule.good.smiles}
-                      width={180}
-                      height={100}
-                    />
+                    rule.good.numbering ? (
+                      <NumberedStructure
+                        smiles={rule.good.smiles}
+                        numbering={rule.good.numbering}
+                        width={200}
+                        height={120}
+                      />
+                    ) : (
+                      <SmilesSvgRenderer
+                        smiles={rule.good.smiles}
+                        width={180}
+                        height={100}
+                      />
+                    )
                   ) : null}
                   <code>{rule.good.name}</code>
                   <div className="naming-rule-note">{rule.good.note}</div>
@@ -273,11 +323,20 @@ export function ReferencePanel() {
                     <Icon icon="cross" size={12} /> Counter-example
                   </div>
                   {rule.bad.smiles ? (
-                    <SmilesSvgRenderer
-                      smiles={rule.bad.smiles}
-                      width={180}
-                      height={100}
-                    />
+                    rule.bad.numbering ? (
+                      <NumberedStructure
+                        smiles={rule.bad.smiles}
+                        numbering={rule.bad.numbering}
+                        width={200}
+                        height={120}
+                      />
+                    ) : (
+                      <SmilesSvgRenderer
+                        smiles={rule.bad.smiles}
+                        width={180}
+                        height={100}
+                      />
+                    )
                   ) : null}
                   <code>{rule.bad.name}</code>
                   <div className="naming-rule-note">{rule.bad.note}</div>
